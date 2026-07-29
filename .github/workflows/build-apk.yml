@@ -28,7 +28,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Regenerate Gradle wrapper jar
-        run: gradle wrapper --gradle-version 9.1.1
+        run: gradle wrapper --gradle-version 9.1.0
         shell: bash
 
       - name: Build debug APK
