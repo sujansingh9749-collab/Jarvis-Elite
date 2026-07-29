@@ -1,0 +1,6 @@
+{
+  "name": "J.A.R.V.I.S.",
+  "description": "Iron Man style AI Voice Assistant with Bangla language support, voice pipeline, local/Gemini AI, screen control, and background service.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

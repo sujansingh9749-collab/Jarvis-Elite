@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">J.A.R.V.I.S.</string>
+    <string name="accessibility_service_description">J.A.R.V.I.S. Screen Control Service allows voice commands to perform screen navigation, tap buttons, scroll, and control apps on your device.</string>
+    <string name="shortcut_listen_short">Listen</string>
+    <string name="shortcut_listen_long">Give J.A.R.V.I.S. a voice command</string>
+    <string name="shortcut_briefing_short">Daily Briefing</string>
+    <string name="shortcut_briefing_long">Get J.A.R.V.I.S. status briefing</string>
+    <string name="shortcut_flashlight_short">Flashlight</string>
+    <string name="shortcut_flashlight_long">Toggle device flashlight</string>
+    <string name="shortcut_diagnostics_short">Diagnostics</string>
+    <string name="shortcut_diagnostics_long">Run full system diagnostics</string>
+</resources>

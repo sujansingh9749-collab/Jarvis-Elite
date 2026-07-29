@@ -1,0 +1,41 @@
+name: Build JARVIS APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Create .env if missing
+        run: |
+          if [ ! -f .env ]; then
+            echo "GEMINI_API_KEY=MY_GEMINI_API_KEY" > .env
+          fi
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Regenerate Gradle wrapper jar
+        run: gradle wrapper --gradle-version 9.1.1
+        shell: bash
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jarvis-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
